@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import { BASE } from '../../app';
 import repairController from '../../controller/RepairController';
 
 export default class TodoListItem extends LitElement {
@@ -23,7 +24,7 @@ export default class TodoListItem extends LitElement {
 
   render() {
     return html`
-      <span><a href="/repair/${this.id}">Reparatie ID: ${this.id}</a></span>
+      <span><a href="${BASE}/repair/${this.id}">Reparatie ID: ${this.id}</a></span>
       <span>Geschatte Reparatietijd: ${this.estimatedTime}</span>
       <span><button @click=${this.remove}>X</button></span>
     `;

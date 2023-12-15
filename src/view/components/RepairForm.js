@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { Router } from '@vaadin/router';
+import { BASE } from '../../app';
 import repairController from '../../controller/RepairController';
 
 import './RepairAssignmentForm';
@@ -60,7 +61,7 @@ export default class RepairForm extends LitElement {
 
     repairController.addRepair(formData)
       .then((data) => {
-        Router.go('/');
+        Router.go(`${BASE}/`);
       });
   }
 

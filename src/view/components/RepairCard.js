@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-import router from '../../app';
+import { router, BASE } from '../../app';
 import repairController from '../../controller/RepairController';
 
 export default class RepairCard extends LitElement {
@@ -51,7 +51,7 @@ export default class RepairCard extends LitElement {
         <p>Geschatte reparatietijd: ${this.estimatedTime} minuten</p>
       </section>
 
-      <a href="/"><button>Terug naar de homepagina</button></a>
+      <a href="${BASE}/"><button>Terug naar de homepagina</button></a>
     `;
   }
 }
