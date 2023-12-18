@@ -52,7 +52,7 @@ export default class RepairForm extends LitElement {
     }
 
     console.log(formData);
-    // window.print();
+    window.print();
   }
 
   render() {
